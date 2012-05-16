@@ -11,4 +11,19 @@ class Cars extends Concepts {
     
   }
   
+  void deselect() {
+    for (Car car in this) {
+      car.selected = false;
+    }
+  }
+  
+  Car getSelectedCar() {
+    for (Car car in this) {
+      if (car.selected) {
+        return car;
+      }
+    }
+    return null;
+  }
+  
 }

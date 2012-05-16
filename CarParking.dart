@@ -16,6 +16,8 @@
 
 #source('model/CarParkingModel.dart');
 
+#source('view/Board.dart');
+
 printAreaParkingCar(CarParkingModel carParkingModel) {
   print('-----------------------');
   print('-Areas, Parkings, Cars-');
@@ -66,11 +68,20 @@ printParkingCar(CarParkingModel carParkingModel) {
   }
 }
 
-void main() {
-  CarParkingModel carParkingModel = new CarParkingModel(); 
+printModel(CarParkingModel carParkingModel) {  
   printAreaParkingCar(carParkingModel);
   printCarBrandCar(carParkingModel);
   printParkingCar(carParkingModel);
+}
+
+void main() {
+  CarParkingModel carParkingModel = new CarParkingModel();
+  // printModel(carParkingModel);
+  
+  // Get a reference to the canvas.
+  CanvasElement canvas = document.query('#canvas');
+  Parking parking = carParkingModel.parkings.getParking('beginner', 1);
+  Board board = new Board(canvas, parking);
 }
 
 

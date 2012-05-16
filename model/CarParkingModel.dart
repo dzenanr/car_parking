@@ -28,6 +28,7 @@ class CarParkingModel {
     CarBrand carBrandA = new CarBrand('A');
     carBrandA.length = 2;
     carBrandA.colorName = 'green';
+    carBrandA.color = '#66CC99';
     carBrandA.red = 102;
     carBrandA.green = 204;
     carBrandA.blue = 153;
@@ -36,6 +37,7 @@ class CarParkingModel {
     CarBrand carBrandB = new CarBrand('B');
     carBrandB.length = 2;
     carBrandB.colorName = 'orange';
+    carBrandB.color = '#FFCC66';
     carBrandB.red = 255;
     carBrandB.green = 204;
     carBrandB.blue = 102;
@@ -44,6 +46,7 @@ class CarParkingModel {
     CarBrand carBrandC = new CarBrand('C');
     carBrandC.length = 2;
     carBrandC.colorName = 'cyan';
+    carBrandC.color = '#00FFFF';
     carBrandC.red = 0;
     carBrandC.green = 255;
     carBrandC.blue = 255;
@@ -52,6 +55,7 @@ class CarParkingModel {
     CarBrand carBrandD = new CarBrand('D');
     carBrandD.length = 2;
     carBrandD.colorName = 'light pink';
+    carBrandD.color = '#FF99CC';
     carBrandD.red = 255;
     carBrandD.green = 153;
     carBrandD.blue = 204;
@@ -60,6 +64,7 @@ class CarParkingModel {
     CarBrand carBrandE = new CarBrand('E');
     carBrandE.length = 2;
     carBrandE.colorName = 'dark magenta';
+    carBrandE.color = '#660033';
     carBrandE.red = 102;
     carBrandE.green = 0;
     carBrandE.blue = 51;
@@ -68,6 +73,7 @@ class CarParkingModel {
     CarBrand carBrandF = new CarBrand('F');
     carBrandF.length = 2;
     carBrandF.colorName = 'dark green';
+    carBrandF.color = '#009966';
     carBrandF.red = 0;
     carBrandF.green = 153;
     carBrandF.blue = 102;
@@ -76,6 +82,7 @@ class CarParkingModel {
     CarBrand carBrandG = new CarBrand('G');
     carBrandG.length = 2;
     carBrandG.colorName = 'gray';
+    carBrandG.color = '#BEBEBE';
     carBrandG.red = 190;
     carBrandG.green = 190;
     carBrandG.blue = 190;
@@ -84,6 +91,7 @@ class CarParkingModel {
     CarBrand carBrandH = new CarBrand('H');
     carBrandH.length = 2;
     carBrandH.colorName = 'peach';
+    carBrandH.color = '#FF9966';
     carBrandH.red = 255;
     carBrandH.green = 153;
     carBrandH.blue = 102;
@@ -92,6 +100,7 @@ class CarParkingModel {
     CarBrand carBrandI = new CarBrand('I');
     carBrandI.length = 2;
     carBrandI.colorName = 'light gray';
+    carBrandI.color = '#D3D3D3';
     carBrandI.red = 211;
     carBrandI.green = 211;
     carBrandI.blue = 211;
@@ -100,6 +109,7 @@ class CarParkingModel {
     CarBrand carBrandJ = new CarBrand('J');
     carBrandJ.length = 2;
     carBrandJ.colorName = 'brown';
+    carBrandJ.color = '#996600';
     carBrandJ.red = 153;
     carBrandJ.green = 102;
     carBrandJ.blue = 0;
@@ -108,6 +118,7 @@ class CarParkingModel {
     CarBrand carBrandK = new CarBrand('K');
     carBrandK.length = 2;
     carBrandK.colorName = 'mustard';
+    carBrandK.color = '#CC9900';
     carBrandK.red = 204;
     carBrandK.green = 153;
     carBrandK.blue = 0;
@@ -116,14 +127,16 @@ class CarParkingModel {
     CarBrand carBrandO = new CarBrand('O');
     carBrandO.length = 3;
     carBrandO.colorName = 'light yellow';
+    carBrandO.color = '#FFFF99';
     carBrandO.red = 255;
-    carBrandO.green = 153;
+    carBrandO.green = 255;
     carBrandO.blue = 153;
     carBrands.add(carBrandO);
     
     CarBrand carBrandP = new CarBrand('P');
     carBrandP.length = 3;
     carBrandP.colorName = 'magenta';
+    carBrandP.color = '#993366';
     carBrandP.red = 153;
     carBrandP.green = 51;
     carBrandP.blue = 102;
@@ -132,6 +145,7 @@ class CarParkingModel {
     CarBrand carBrandQ = new CarBrand('Q');
     carBrandQ.length = 3;
     carBrandQ.colorName = 'gray blue';
+    carBrandQ.color = '#6699CC';
     carBrandQ.red = 102;
     carBrandQ.green = 153;
     carBrandQ.blue = 204;
@@ -140,6 +154,7 @@ class CarParkingModel {
     CarBrand carBrandR = new CarBrand('R');
     carBrandR.length = 3;
     carBrandR.colorName = 'deep sky blue';
+    carBrandR.color = '#00BFFF';
     carBrandR.red = 0;
     carBrandR.green = 191;
     carBrandR.blue = 255;
@@ -148,6 +163,7 @@ class CarParkingModel {
     CarBrand carBrandX = new CarBrand('X');
     carBrandX.length = 2;
     carBrandX.colorName = 'red';
+    carBrandX.color = '#CC0033';
     carBrandX.red = 204;
     carBrandX.green = 0;
     carBrandX.blue = 51;
@@ -279,6 +295,11 @@ class CarParkingModel {
         car1X.startColumn = 1;
         parking.cars.add(car1X);
         carBrandX.cars.add(car1X);
+      }
+      
+      for (Car car in parking.cars) {
+        car.currentRow = car.startRow;
+        car.currentColumn = car.startColumn;
       }
     }
   }

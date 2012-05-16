@@ -3,6 +3,7 @@ class CarBrand extends Concept {
   String code;
   int length;
   String colorName;
+  String color;
   int red;
   int green;
   int blue;
