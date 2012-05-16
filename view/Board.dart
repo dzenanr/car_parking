@@ -20,13 +20,17 @@ class Board {
   
   Parking parking;
   
+  ActionPanel actionPanel;
+  
   Board(this.canvas, this.parking) {
     context = canvas.getContext('2d');
     width = canvas.width;
     height = canvas.height;
     cellWidth = width ~/ COLUMNS_COUNT;
     cellHeight = height ~/ ROWS_COUNT;
-    border();
+    // border();
+    
+    actionPanel = new ActionPanel(this);
  
     // Canvas event.
     document.query('#canvas').on.mouseDown.add(onMouseDown);
@@ -39,9 +43,17 @@ class Board {
     displayCars();
   }
   
+  void restart() {
+    for (Car car in parking.cars) {
+      car.currentRow = car.startRow;
+      car.currentColumn = car.startColumn;
+      car.selected = false;
+    }
+  }
+  
   void clear() {
     context.clearRect(0, 0, width, height);
-    border();
+    //border();
   } 
   
   void border() {
@@ -76,7 +88,7 @@ class Board {
     context.lineWidth = LINE_WIDTH;
     context.strokeStyle = LINE_COLOR;
     context.fillStyle = car.carBrand.color;
-    //context.rect(x, y , carWidth, carHeight);
+    // context.rect(x, y , carWidth, carHeight);
     context.fillRect(x, y , carWidth, carHeight);  
     if (car.selected) {
       context.rect(x, y, SSS, SSS);

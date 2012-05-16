@@ -17,6 +17,7 @@
 #source('model/CarParkingModel.dart');
 
 #source('view/Board.dart');
+#source('view/ActionPanel.dart');
 
 printAreaParkingCar(CarParkingModel carParkingModel) {
   print('-----------------------');
