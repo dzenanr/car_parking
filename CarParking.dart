@@ -16,6 +16,8 @@
 
 #source('model/CarParkingModel.dart');
 
+#source('data/init.dart');
+
 #source('view/MenuBar.dart');
 #source('view/Board.dart');
 #source('view/ActionPanel.dart');

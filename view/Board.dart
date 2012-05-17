@@ -47,6 +47,7 @@ class Board {
   
   void set currentArea(Area area) {
     _currentArea = area;
+    currentParking = area.parkings.getParkingWithinArea(1);
     actionPanel.displayCurrentArea();
   }
   

@@ -19,7 +19,6 @@ class ActionPanel {
   
   void displayCurrentArea() {
     areaLabel.text = board.currentArea.code;
-    parkingLabel.text = '';
   }
   
   void displayCurrentParking() {
