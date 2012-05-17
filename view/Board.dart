@@ -18,11 +18,14 @@ class Board {
   int cellWidth;
   int cellHeight;
   
-  Parking parking;
+  CarParkingModel carParkingModel;
+  Area _currentArea;
+  Parking _currentParking;
   
+  MenuBar menuBar;
   ActionPanel actionPanel;
   
-  Board(this.canvas, this.parking) {
+  Board(this.canvas, this.carParkingModel) {
     context = canvas.getContext('2d');
     width = canvas.width;
     height = canvas.height;
@@ -30,12 +33,34 @@ class Board {
     cellHeight = height ~/ ROWS_COUNT;
     // border();
     
+    menuBar = new MenuBar(this);
     actionPanel = new ActionPanel(this);
+    
+    currentArea = carParkingModel.areas.getArea('beginner');
+    currentParking = currentArea.parkings.getParkingWithinArea(1);
  
     // Canvas event.
     document.query('#canvas').on.mouseDown.add(onMouseDown);
     // Redraw every INTERVAL ms.
     document.window.setInterval(redraw, INTERVAL);
+  }
+  
+  void set currentArea(Area area) {
+    _currentArea = area;
+    actionPanel.displayCurrentArea();
+  }
+  
+  Area get currentArea() {
+    return _currentArea;
+  }
+  
+  void set currentParking(Parking parking) {
+    _currentParking = parking;
+    actionPanel.displayCurrentParking();
+  }
+  
+  Parking get currentParking() {
+    return _currentParking;
   }
   
   void redraw() {
@@ -44,7 +69,7 @@ class Board {
   }
   
   void restart() {
-    for (Car car in parking.cars) {
+    for (Car car in currentParking.cars) {
       car.currentRow = car.startRow;
       car.currentColumn = car.startColumn;
       car.selected = false;
@@ -66,7 +91,7 @@ class Board {
   }
   
   void displayCars() {
-    for (Car car in parking.cars) {
+    for (Car car in currentParking.cars) {
       displayCar(car);
     }
   }
@@ -101,7 +126,7 @@ class Board {
   }
   
   Car getCarInCell(int row, int column) {
-    for (Car car in parking.cars) {
+    for (Car car in currentParking.cars) {
       if (car.inCell(row, column)) {
         return car;
       } 
@@ -110,7 +135,7 @@ class Board {
   }
   
   Car getSelectedCarAfterOrBeforeCell(int row, int column) {
-    for (Car car in parking.cars) {
+    for (Car car in currentParking.cars) {
       if (car.selected && car.afterOrBeforeCell(row, column)) {
         return car;
       } 
@@ -123,7 +148,7 @@ class Board {
     int column = e.offsetX ~/ cellWidth;
     Car car = getCarInCell(row, column);
     if (car != null) {  
-      parking.cars.deselect();
+      currentParking.cars.deselect();
       car.selected = true;
     } else {
       car = getSelectedCarAfterOrBeforeCell(row, column);

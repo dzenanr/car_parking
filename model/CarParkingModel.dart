@@ -9,10 +9,16 @@ class CarParkingModel {
     fillAreas();
     carBrands = new CarBrands();
     fillCarBrands();
+    parkings = new Parkings();
     Area beginnerArea = areas.getArea('beginner');
     if (beginnerArea != null) {
-      parkings = new Parkings.ofArea(beginnerArea);
+      beginnerArea.parkings = new Parkings.ofArea(beginnerArea);
       fillParkingsOfBeginnerArea(beginnerArea);
+    }
+    Area intermediateArea = areas.getArea('intermediate');
+    if (intermediateArea != null) {
+      intermediateArea.parkings = new Parkings.ofArea(intermediateArea);
+      fillParkingsOfIntermediateArea(intermediateArea);
     }
   }
   
@@ -180,38 +186,21 @@ class CarParkingModel {
       Parking parking2 = new Parking(area, 2);
       parkings.add(parking2); 
       area.parkings.add(parking2);
+      fillCarsOfParking2OfBeginnerArea(area, parking2);
+    }
+  }
+  
+  fillParkingsOfIntermediateArea(Area area) {
+    if (area.code == 'intermediate') {
+      Parking parking1 = new Parking(area, 1);
+      parkings.add(parking1);
+      area.parkings.add(parking1);
+      fillCarsOfParking1OfIntermediateArea(area, parking1);
       
-      Parking parking3 = new Parking(area, 3);
-      parkings.add(parking3); 
-      area.parkings.add(parking3);
-      
-      Parking parking4 = new Parking(area, 4);
-      parkings.add(parking4); 
-      area.parkings.add(parking4);
-      
-      Parking parking5 = new Parking(area, 5);
-      parkings.add(parking5); 
-      area.parkings.add(parking5);
-      
-      Parking parking6 = new Parking(area, 6);
-      parkings.add(parking6);
-      area.parkings.add(parking6);
-      
-      Parking parking7 = new Parking(area, 7);
-      parkings.add(parking7); 
-      area.parkings.add(parking7);
-      
-      Parking parking8 = new Parking(area, 8);
-      parkings.add(parking8); 
-      area.parkings.add(parking8);
-      
-      Parking parking9 = new Parking(area, 9);
-      parkings.add(parking9); 
-      area.parkings.add(parking9);
-      
-      Parking parking10 = new Parking(area, 10);
-      parkings.add(parking10);
-      area.parkings.add(parking10);
+      Parking parking2 = new Parking(area, 2);
+      parkings.add(parking2); 
+      area.parkings.add(parking2);
+      fillCarsOfParking2OfIntermediateArea(area, parking2);
     }
   }
   
@@ -223,6 +212,273 @@ class CarParkingModel {
         car1A.orientation = 'horizontal';
         car1A.startRow = 0;
         car1A.startColumn = 0;
+        parking.cars.add(car1A);
+        carBrandA.cars.add(car1A);
+      }
+      
+      CarBrand carBrandB = carBrands.getCarBrand('B');
+      if (carBrandB != null) {
+        Car car1B = new Car(parking, carBrandB);
+        car1B.orientation = 'vertical';
+        car1B.startRow = 4;
+        car1B.startColumn = 0;
+        parking.cars.add(car1B);
+        carBrandB.cars.add(car1B);
+      }
+      
+      CarBrand carBrandC = carBrands.getCarBrand('C');
+      if (carBrandC != null) {
+        Car car1C = new Car(parking, carBrandC);
+        car1C.orientation = 'horizontal';
+        car1C.startRow = 4;
+        car1C.startColumn = 4;
+        parking.cars.add(car1C);
+        carBrandC.cars.add(car1C);
+      }
+      
+      CarBrand carBrandO = carBrands.getCarBrand('O');
+      if (carBrandO != null) {
+        Car car1O = new Car(parking, carBrandO);
+        car1O.orientation = 'vertical';
+        car1O.startRow = 0;
+        car1O.startColumn = 5;
+        parking.cars.add(car1O);
+        carBrandO.cars.add(car1O);
+      }
+      
+      CarBrand carBrandP = carBrands.getCarBrand('P');
+      if (carBrandP != null) {
+        Car car1P = new Car(parking, carBrandP);
+        car1P.orientation = 'vertical';
+        car1P.startRow = 1;
+        car1P.startColumn = 0;
+        parking.cars.add(car1P);
+        carBrandP.cars.add(car1P);
+      }
+      
+      CarBrand carBrandQ = carBrands.getCarBrand('Q');
+      if (carBrandQ != null) {
+        Car car1Q = new Car(parking, carBrandQ);
+        car1Q.orientation = 'vertical';
+        car1Q.startRow = 1;
+        car1Q.startColumn = 3;
+        parking.cars.add(car1Q);
+        carBrandQ.cars.add(car1Q);
+      }
+      
+      CarBrand carBrandR = carBrands.getCarBrand('R');
+      if (carBrandR != null) {
+        Car car1R = new Car(parking, carBrandR);
+        car1R.orientation = 'horizontal';
+        car1R.startRow = 5;
+        car1R.startColumn = 2;
+        parking.cars.add(car1R);
+        carBrandR.cars.add(car1R);
+      }
+      
+      CarBrand carBrandX = carBrands.getCarBrand('X');
+      if (carBrandX != null) {
+        Car car1X = new Car(parking, carBrandX);
+        car1X.orientation = 'horizontal';
+        car1X.startRow = 2;
+        car1X.startColumn = 1;
+        parking.cars.add(car1X);
+        carBrandX.cars.add(car1X);
+      }
+      
+      for (Car car in parking.cars) {
+        car.currentRow = car.startRow;
+        car.currentColumn = car.startColumn;
+      }
+    }
+  }
+  
+  fillCarsOfParking2OfBeginnerArea(Area area, Parking parking) {
+    if (area.code == 'beginner' && parking.number == 2) {
+      CarBrand carBrandA = carBrands.getCarBrand('A');
+      if (carBrandA != null) {
+        Car car1A = new Car(parking, carBrandA);
+        car1A.orientation = 'horizontal';
+        car1A.startRow = 1;
+        car1A.startColumn = 1;
+        parking.cars.add(car1A);
+        carBrandA.cars.add(car1A);
+      }
+      
+      CarBrand carBrandB = carBrands.getCarBrand('B');
+      if (carBrandB != null) {
+        Car car1B = new Car(parking, carBrandB);
+        car1B.orientation = 'vertical';
+        car1B.startRow = 4;
+        car1B.startColumn = 0;
+        parking.cars.add(car1B);
+        carBrandB.cars.add(car1B);
+      }
+      
+      CarBrand carBrandC = carBrands.getCarBrand('C');
+      if (carBrandC != null) {
+        Car car1C = new Car(parking, carBrandC);
+        car1C.orientation = 'horizontal';
+        car1C.startRow = 4;
+        car1C.startColumn = 4;
+        parking.cars.add(car1C);
+        carBrandC.cars.add(car1C);
+      }
+      
+      CarBrand carBrandO = carBrands.getCarBrand('O');
+      if (carBrandO != null) {
+        Car car1O = new Car(parking, carBrandO);
+        car1O.orientation = 'vertical';
+        car1O.startRow = 0;
+        car1O.startColumn = 5;
+        parking.cars.add(car1O);
+        carBrandO.cars.add(car1O);
+      }
+      
+      CarBrand carBrandP = carBrands.getCarBrand('P');
+      if (carBrandP != null) {
+        Car car1P = new Car(parking, carBrandP);
+        car1P.orientation = 'vertical';
+        car1P.startRow = 1;
+        car1P.startColumn = 0;
+        parking.cars.add(car1P);
+        carBrandP.cars.add(car1P);
+      }
+      
+      CarBrand carBrandQ = carBrands.getCarBrand('Q');
+      if (carBrandQ != null) {
+        Car car1Q = new Car(parking, carBrandQ);
+        car1Q.orientation = 'vertical';
+        car1Q.startRow = 1;
+        car1Q.startColumn = 3;
+        parking.cars.add(car1Q);
+        carBrandQ.cars.add(car1Q);
+      }
+      
+      CarBrand carBrandR = carBrands.getCarBrand('R');
+      if (carBrandR != null) {
+        Car car1R = new Car(parking, carBrandR);
+        car1R.orientation = 'horizontal';
+        car1R.startRow = 5;
+        car1R.startColumn = 2;
+        parking.cars.add(car1R);
+        carBrandR.cars.add(car1R);
+      }
+      
+      CarBrand carBrandX = carBrands.getCarBrand('X');
+      if (carBrandX != null) {
+        Car car1X = new Car(parking, carBrandX);
+        car1X.orientation = 'horizontal';
+        car1X.startRow = 2;
+        car1X.startColumn = 1;
+        parking.cars.add(car1X);
+        carBrandX.cars.add(car1X);
+      }
+      
+      for (Car car in parking.cars) {
+        car.currentRow = car.startRow;
+        car.currentColumn = car.startColumn;
+      }
+    }
+  }
+  
+  fillCarsOfParking1OfIntermediateArea(Area area, Parking parking) {
+    if (area.code == 'intermediate' && parking.number == 1) {
+      CarBrand carBrandA = carBrands.getCarBrand('A');
+      if (carBrandA != null) {
+        Car car1A = new Car(parking, carBrandA);
+        car1A.orientation = 'horizontal';
+        car1A.startRow = 2;
+        car1A.startColumn = 2;
+        parking.cars.add(car1A);
+        carBrandA.cars.add(car1A);
+      }
+      
+      CarBrand carBrandB = carBrands.getCarBrand('B');
+      if (carBrandB != null) {
+        Car car1B = new Car(parking, carBrandB);
+        car1B.orientation = 'vertical';
+        car1B.startRow = 4;
+        car1B.startColumn = 0;
+        parking.cars.add(car1B);
+        carBrandB.cars.add(car1B);
+      }
+      
+      CarBrand carBrandC = carBrands.getCarBrand('C');
+      if (carBrandC != null) {
+        Car car1C = new Car(parking, carBrandC);
+        car1C.orientation = 'horizontal';
+        car1C.startRow = 4;
+        car1C.startColumn = 4;
+        parking.cars.add(car1C);
+        carBrandC.cars.add(car1C);
+      }
+      
+      CarBrand carBrandO = carBrands.getCarBrand('O');
+      if (carBrandO != null) {
+        Car car1O = new Car(parking, carBrandO);
+        car1O.orientation = 'vertical';
+        car1O.startRow = 0;
+        car1O.startColumn = 5;
+        parking.cars.add(car1O);
+        carBrandO.cars.add(car1O);
+      }
+      
+      CarBrand carBrandP = carBrands.getCarBrand('P');
+      if (carBrandP != null) {
+        Car car1P = new Car(parking, carBrandP);
+        car1P.orientation = 'vertical';
+        car1P.startRow = 1;
+        car1P.startColumn = 0;
+        parking.cars.add(car1P);
+        carBrandP.cars.add(car1P);
+      }
+      
+      CarBrand carBrandQ = carBrands.getCarBrand('Q');
+      if (carBrandQ != null) {
+        Car car1Q = new Car(parking, carBrandQ);
+        car1Q.orientation = 'vertical';
+        car1Q.startRow = 1;
+        car1Q.startColumn = 3;
+        parking.cars.add(car1Q);
+        carBrandQ.cars.add(car1Q);
+      }
+      
+      CarBrand carBrandR = carBrands.getCarBrand('R');
+      if (carBrandR != null) {
+        Car car1R = new Car(parking, carBrandR);
+        car1R.orientation = 'horizontal';
+        car1R.startRow = 5;
+        car1R.startColumn = 2;
+        parking.cars.add(car1R);
+        carBrandR.cars.add(car1R);
+      }
+      
+      CarBrand carBrandX = carBrands.getCarBrand('X');
+      if (carBrandX != null) {
+        Car car1X = new Car(parking, carBrandX);
+        car1X.orientation = 'horizontal';
+        car1X.startRow = 2;
+        car1X.startColumn = 1;
+        parking.cars.add(car1X);
+        carBrandX.cars.add(car1X);
+      }
+      
+      for (Car car in parking.cars) {
+        car.currentRow = car.startRow;
+        car.currentColumn = car.startColumn;
+      }
+    }
+  }
+  
+  fillCarsOfParking2OfIntermediateArea(Area area, Parking parking) {
+    if (area.code == 'intermediate' && parking.number == 2) {
+      CarBrand carBrandA = carBrands.getCarBrand('A');
+      if (carBrandA != null) {
+        Car car1A = new Car(parking, carBrandA);
+        car1A.orientation = 'horizontal';
+        car1A.startRow = 3;
+        car1A.startColumn = 3;
         parking.cars.add(car1A);
         carBrandA.cars.add(car1A);
       }

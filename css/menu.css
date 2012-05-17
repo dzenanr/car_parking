@@ -54,7 +54,7 @@
 
   nav li:hover ul {
     display: block;
-    width: 200px;
+    width: 180px;
   }
 
   nav li li {

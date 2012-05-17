@@ -13,18 +13,18 @@
 
   header {
     color: #663117;
-    padding: 4px;
+    padding: 2px;
     background: #d7e9f7;
     text-align: center;
   }
     	
   footer {
     font-family: arial, sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bold;
     color: #ffffff;
     background: #663117;
-    padding: 10px;
+    padding: 8px;
     border-top: 2px solid #999999;
   }
 		

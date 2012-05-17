@@ -16,6 +16,7 @@
 
 #source('model/CarParkingModel.dart');
 
+#source('view/MenuBar.dart');
 #source('view/Board.dart');
 #source('view/ActionPanel.dart');
 
@@ -81,8 +82,7 @@ void main() {
   
   // Get a reference to the canvas.
   CanvasElement canvas = document.query('#canvas');
-  Parking parking = carParkingModel.parkings.getParking('beginner', 1);
-  Board board = new Board(canvas, parking);
+  Board board = new Board(canvas, carParkingModel);
 }
 
 
