@@ -79,7 +79,7 @@ class Board {
   
   void clear() {
     context.clearRect(0, 0, width, height);
-    //border();
+    // border();
   } 
   
   void border() {
