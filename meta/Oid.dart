@@ -6,7 +6,7 @@ class Oid {
   
   Oid() {
     Date nowDate = new Date.now();
-    int nowValue = nowDate.value;
+    int nowValue = nowDate.millisecondsSinceEpoch;  // versus nowDate.millisecond ?
     timeStamp = nowValue + increment++;
   }
   
