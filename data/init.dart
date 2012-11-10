@@ -10,7 +10,7 @@ init(CarParkingModel carParkingModel) {
 initAreas() {
   Area areaBeginner = new Area('beginner');
   model.areas.add(areaBeginner);
-  
+
   Area areaIntermediate = new Area('intermediate');
   model.areas.add(areaIntermediate);
 }
@@ -24,7 +24,7 @@ initCarBrands() {
   carBrandA.green = 204;
   carBrandA.blue = 153;
   model.carBrands.add(carBrandA);
-  
+
   CarBrand carBrandB = new CarBrand('B');
   carBrandB.length = 2;
   carBrandB.colorName = 'orange';
@@ -32,8 +32,8 @@ initCarBrands() {
   carBrandB.red = 255;
   carBrandB.green = 204;
   carBrandB.blue = 102;
-  model.carBrands.add(carBrandB);  
-  
+  model.carBrands.add(carBrandB);
+
   CarBrand carBrandC = new CarBrand('C');
   carBrandC.length = 2;
   carBrandC.colorName = 'cyan';
@@ -42,7 +42,7 @@ initCarBrands() {
   carBrandC.green = 255;
   carBrandC.blue = 255;
   model.carBrands.add(carBrandC);
-  
+
   CarBrand carBrandD = new CarBrand('D');
   carBrandD.length = 2;
   carBrandD.colorName = 'light pink';
@@ -50,8 +50,8 @@ initCarBrands() {
   carBrandD.red = 255;
   carBrandD.green = 153;
   carBrandD.blue = 204;
-  model.carBrands.add(carBrandD); 
-  
+  model.carBrands.add(carBrandD);
+
   CarBrand carBrandE = new CarBrand('E');
   carBrandE.length = 2;
   carBrandE.colorName = 'dark magenta';
@@ -60,7 +60,7 @@ initCarBrands() {
   carBrandE.green = 0;
   carBrandE.blue = 51;
   model.carBrands.add(carBrandE);
-  
+
   CarBrand carBrandF = new CarBrand('F');
   carBrandF.length = 2;
   carBrandF.colorName = 'dark green';
@@ -68,8 +68,8 @@ initCarBrands() {
   carBrandF.red = 0;
   carBrandF.green = 153;
   carBrandF.blue = 102;
-  model.carBrands.add(carBrandF); 
-  
+  model.carBrands.add(carBrandF);
+
   CarBrand carBrandG = new CarBrand('G');
   carBrandG.length = 2;
   carBrandG.colorName = 'gray';
@@ -78,7 +78,7 @@ initCarBrands() {
   carBrandG.green = 190;
   carBrandG.blue = 190;
   model.carBrands.add(carBrandG);
-  
+
   CarBrand carBrandH = new CarBrand('H');
   carBrandH.length = 2;
   carBrandH.colorName = 'peach';
@@ -86,8 +86,8 @@ initCarBrands() {
   carBrandH.red = 255;
   carBrandH.green = 153;
   carBrandH.blue = 102;
-  model.carBrands.add(carBrandH); 
-  
+  model.carBrands.add(carBrandH);
+
   CarBrand carBrandI = new CarBrand('I');
   carBrandI.length = 2;
   carBrandI.colorName = 'light gray';
@@ -96,7 +96,7 @@ initCarBrands() {
   carBrandI.green = 211;
   carBrandI.blue = 211;
   model.carBrands.add(carBrandI);
-  
+
   CarBrand carBrandJ = new CarBrand('J');
   carBrandJ.length = 2;
   carBrandJ.colorName = 'brown';
@@ -105,7 +105,7 @@ initCarBrands() {
   carBrandJ.green = 102;
   carBrandJ.blue = 0;
   model.carBrands.add(carBrandJ);
-  
+
   CarBrand carBrandK = new CarBrand('K');
   carBrandK.length = 2;
   carBrandK.colorName = 'mustard';
@@ -114,7 +114,7 @@ initCarBrands() {
   carBrandK.green = 153;
   carBrandK.blue = 0;
   model.carBrands.add(carBrandK);
-  
+
   CarBrand carBrandO = new CarBrand('O');
   carBrandO.length = 3;
   carBrandO.colorName = 'light yellow';
@@ -123,7 +123,7 @@ initCarBrands() {
   carBrandO.green = 255;
   carBrandO.blue = 153;
   model.carBrands.add(carBrandO);
-  
+
   CarBrand carBrandP = new CarBrand('P');
   carBrandP.length = 3;
   carBrandP.colorName = 'magenta';
@@ -132,7 +132,7 @@ initCarBrands() {
   carBrandP.green = 51;
   carBrandP.blue = 102;
   model.carBrands.add(carBrandP);
-  
+
   CarBrand carBrandQ = new CarBrand('Q');
   carBrandQ.length = 3;
   carBrandQ.colorName = 'gray blue';
@@ -141,7 +141,7 @@ initCarBrands() {
   carBrandQ.green = 153;
   carBrandQ.blue = 204;
   model.carBrands.add(carBrandQ);
-  
+
   CarBrand carBrandR = new CarBrand('R');
   carBrandR.length = 3;
   carBrandR.colorName = 'deep sky blue';
@@ -150,7 +150,7 @@ initCarBrands() {
   carBrandR.green = 191;
   carBrandR.blue = 255;
   model.carBrands.add(carBrandR);
-  
+
   CarBrand carBrandX = new CarBrand('X');
   carBrandX.length = 2;
   carBrandX.colorName = 'red';
@@ -161,7 +161,7 @@ initCarBrands() {
   model.carBrands.add(carBrandX);
 }
 
-initParkings() { 
+initParkings() {
   Area beginnerArea = model.areas.getArea('beginner');
   if (beginnerArea != null) {
     beginnerArea.parkings = new Parkings.ofArea(beginnerArea);
@@ -172,7 +172,7 @@ initParkings() {
     intermediateArea.parkings = new Parkings.ofArea(intermediateArea);
     initParkingsOfIntermediateArea(intermediateArea);
   }
-  
+
 }
 
 initParkingsOfBeginnerArea(Area area) {
@@ -181,9 +181,9 @@ initParkingsOfBeginnerArea(Area area) {
     model.parkings.add(parking1);
     area.parkings.add(parking1);
     initCarsOfParking1OfBeginnerArea(area, parking1);
-    
+
     Parking parking2 = new Parking(area, 2);
-    model.parkings.add(parking2); 
+    model.parkings.add(parking2);
     area.parkings.add(parking2);
     initCarsOfParking2OfBeginnerArea(area, parking2);
   }
@@ -195,9 +195,9 @@ initParkingsOfIntermediateArea(Area area) {
     model.parkings.add(parking1);
     area.parkings.add(parking1);
     initCarsOfParking1OfIntermediateArea(area, parking1);
-    
+
     Parking parking2 = new Parking(area, 2);
-    model.parkings.add(parking2); 
+    model.parkings.add(parking2);
     area.parkings.add(parking2);
     initCarsOfParking2OfIntermediateArea(area, parking2);
   }
@@ -214,7 +214,7 @@ initCarsOfParking1OfBeginnerArea(Area area, Parking parking) {
       parking.cars.add(car1A);
       carBrandA.cars.add(car1A);
     }
-    
+
     CarBrand carBrandB = model.carBrands.getCarBrand('B');
     if (carBrandB != null) {
       Car car1B = new Car(parking, carBrandB);
@@ -224,7 +224,7 @@ initCarsOfParking1OfBeginnerArea(Area area, Parking parking) {
       parking.cars.add(car1B);
       carBrandB.cars.add(car1B);
     }
-    
+
     CarBrand carBrandC = model.carBrands.getCarBrand('C');
     if (carBrandC != null) {
       Car car1C = new Car(parking, carBrandC);
@@ -234,7 +234,7 @@ initCarsOfParking1OfBeginnerArea(Area area, Parking parking) {
       parking.cars.add(car1C);
       carBrandC.cars.add(car1C);
     }
-    
+
     CarBrand carBrandO = model.carBrands.getCarBrand('O');
     if (carBrandO != null) {
       Car car1O = new Car(parking, carBrandO);
@@ -244,7 +244,7 @@ initCarsOfParking1OfBeginnerArea(Area area, Parking parking) {
       parking.cars.add(car1O);
       carBrandO.cars.add(car1O);
     }
-    
+
     CarBrand carBrandP = model.carBrands.getCarBrand('P');
     if (carBrandP != null) {
       Car car1P = new Car(parking, carBrandP);
@@ -254,7 +254,7 @@ initCarsOfParking1OfBeginnerArea(Area area, Parking parking) {
       parking.cars.add(car1P);
       carBrandP.cars.add(car1P);
     }
-    
+
     CarBrand carBrandQ = model.carBrands.getCarBrand('Q');
     if (carBrandQ != null) {
       Car car1Q = new Car(parking, carBrandQ);
@@ -264,7 +264,7 @@ initCarsOfParking1OfBeginnerArea(Area area, Parking parking) {
       parking.cars.add(car1Q);
       carBrandQ.cars.add(car1Q);
     }
-    
+
     CarBrand carBrandR = model.carBrands.getCarBrand('R');
     if (carBrandR != null) {
       Car car1R = new Car(parking, carBrandR);
@@ -274,7 +274,7 @@ initCarsOfParking1OfBeginnerArea(Area area, Parking parking) {
       parking.cars.add(car1R);
       carBrandR.cars.add(car1R);
     }
-    
+
     CarBrand carBrandX = model.carBrands.getCarBrand('X');
     if (carBrandX != null) {
       Car car1X = new Car(parking, carBrandX);
@@ -284,7 +284,7 @@ initCarsOfParking1OfBeginnerArea(Area area, Parking parking) {
       parking.cars.add(car1X);
       carBrandX.cars.add(car1X);
     }
-    
+
     for (Car car in parking.cars) {
       car.currentRow = car.startRow;
       car.currentColumn = car.startColumn;
@@ -303,7 +303,7 @@ initCarsOfParking2OfBeginnerArea(Area area, Parking parking) {
       parking.cars.add(car1A);
       carBrandA.cars.add(car1A);
     }
-    
+
     CarBrand carBrandB = model.carBrands.getCarBrand('B');
     if (carBrandB != null) {
       Car car1B = new Car(parking, carBrandB);
@@ -313,7 +313,7 @@ initCarsOfParking2OfBeginnerArea(Area area, Parking parking) {
       parking.cars.add(car1B);
       carBrandB.cars.add(car1B);
     }
-    
+
     CarBrand carBrandC = model.carBrands.getCarBrand('C');
     if (carBrandC != null) {
       Car car1C = new Car(parking, carBrandC);
@@ -323,7 +323,7 @@ initCarsOfParking2OfBeginnerArea(Area area, Parking parking) {
       parking.cars.add(car1C);
       carBrandC.cars.add(car1C);
     }
-    
+
     CarBrand carBrandD = model.carBrands.getCarBrand('D');
     if (carBrandD != null) {
       Car car1D = new Car(parking, carBrandD);
@@ -333,7 +333,7 @@ initCarsOfParking2OfBeginnerArea(Area area, Parking parking) {
       parking.cars.add(car1D);
       carBrandD.cars.add(car1D);
     }
-    
+
     CarBrand carBrandE = model.carBrands.getCarBrand('E');
     if (carBrandE != null) {
       Car car1E = new Car(parking, carBrandE);
@@ -343,7 +343,7 @@ initCarsOfParking2OfBeginnerArea(Area area, Parking parking) {
       parking.cars.add(car1E);
       carBrandE.cars.add(car1E);
     }
-    
+
     CarBrand carBrandF = model.carBrands.getCarBrand('F');
     if (carBrandF != null) {
       Car car1F = new Car(parking, carBrandF);
@@ -353,7 +353,7 @@ initCarsOfParking2OfBeginnerArea(Area area, Parking parking) {
       parking.cars.add(car1F);
       carBrandF.cars.add(car1F);
     }
-    
+
     CarBrand carBrandG = model.carBrands.getCarBrand('G');
     if (carBrandG != null) {
       Car car1G = new Car(parking, carBrandG);
@@ -363,7 +363,7 @@ initCarsOfParking2OfBeginnerArea(Area area, Parking parking) {
       parking.cars.add(car1G);
       carBrandG.cars.add(car1G);
     }
-    
+
     CarBrand carBrandO = model.carBrands.getCarBrand('O');
     if (carBrandO != null) {
       Car car1O = new Car(parking, carBrandO);
@@ -373,7 +373,7 @@ initCarsOfParking2OfBeginnerArea(Area area, Parking parking) {
       parking.cars.add(car1O);
       carBrandO.cars.add(car1O);
     }
-    
+
     CarBrand carBrandP = model.carBrands.getCarBrand('P');
     if (carBrandP != null) {
       Car car1P = new Car(parking, carBrandP);
@@ -383,7 +383,7 @@ initCarsOfParking2OfBeginnerArea(Area area, Parking parking) {
       parking.cars.add(car1P);
       carBrandP.cars.add(car1P);
     }
-    
+
     CarBrand carBrandQ = model.carBrands.getCarBrand('Q');
     if (carBrandQ != null) {
       Car car1Q = new Car(parking, carBrandQ);
@@ -393,7 +393,7 @@ initCarsOfParking2OfBeginnerArea(Area area, Parking parking) {
       parking.cars.add(car1Q);
       carBrandQ.cars.add(car1Q);
     }
-    
+
     CarBrand carBrandX = model.carBrands.getCarBrand('X');
     if (carBrandX != null) {
       Car car1X = new Car(parking, carBrandX);
@@ -403,7 +403,7 @@ initCarsOfParking2OfBeginnerArea(Area area, Parking parking) {
       parking.cars.add(car1X);
       carBrandX.cars.add(car1X);
     }
-    
+
     for (Car car in parking.cars) {
       car.currentRow = car.startRow;
       car.currentColumn = car.startColumn;
@@ -422,7 +422,7 @@ initCarsOfParking1OfIntermediateArea(Area area, Parking parking) {
       parking.cars.add(car1A);
       carBrandA.cars.add(car1A);
     }
-    
+
     CarBrand carBrandB = model.carBrands.getCarBrand('B');
     if (carBrandB != null) {
       Car car1B = new Car(parking, carBrandB);
@@ -432,7 +432,7 @@ initCarsOfParking1OfIntermediateArea(Area area, Parking parking) {
       parking.cars.add(car1B);
       carBrandB.cars.add(car1B);
     }
-    
+
     CarBrand carBrandE = model.carBrands.getCarBrand('E');
     if (carBrandE != null) {
       Car car1E = new Car(parking, carBrandE);
@@ -442,7 +442,7 @@ initCarsOfParking1OfIntermediateArea(Area area, Parking parking) {
       parking.cars.add(car1E);
       carBrandE.cars.add(car1E);
     }
-    
+
     CarBrand carBrandO = model.carBrands.getCarBrand('O');
     if (carBrandO != null) {
       Car car1O = new Car(parking, carBrandO);
@@ -452,7 +452,7 @@ initCarsOfParking1OfIntermediateArea(Area area, Parking parking) {
       parking.cars.add(car1O);
       carBrandO.cars.add(car1O);
     }
-    
+
     CarBrand carBrandP = model.carBrands.getCarBrand('P');
     if (carBrandP != null) {
       Car car1P = new Car(parking, carBrandP);
@@ -462,7 +462,7 @@ initCarsOfParking1OfIntermediateArea(Area area, Parking parking) {
       parking.cars.add(car1P);
       carBrandP.cars.add(car1P);
     }
-    
+
     CarBrand carBrandQ = model.carBrands.getCarBrand('Q');
     if (carBrandQ != null) {
       Car car1Q = new Car(parking, carBrandQ);
@@ -472,7 +472,7 @@ initCarsOfParking1OfIntermediateArea(Area area, Parking parking) {
       parking.cars.add(car1Q);
       carBrandQ.cars.add(car1Q);
     }
-    
+
     CarBrand carBrandR = model.carBrands.getCarBrand('R');
     if (carBrandR != null) {
       Car car1R = new Car(parking, carBrandR);
@@ -482,7 +482,7 @@ initCarsOfParking1OfIntermediateArea(Area area, Parking parking) {
       parking.cars.add(car1R);
       carBrandR.cars.add(car1R);
     }
-    
+
     CarBrand carBrandX = model.carBrands.getCarBrand('X');
     if (carBrandX != null) {
       Car car1X = new Car(parking, carBrandX);
@@ -492,7 +492,7 @@ initCarsOfParking1OfIntermediateArea(Area area, Parking parking) {
       parking.cars.add(car1X);
       carBrandX.cars.add(car1X);
     }
-    
+
     for (Car car in parking.cars) {
       car.currentRow = car.startRow;
       car.currentColumn = car.startColumn;
@@ -511,7 +511,7 @@ initCarsOfParking2OfIntermediateArea(Area area, Parking parking) {
       parking.cars.add(car1A);
       carBrandA.cars.add(car1A);
     }
-    
+
     CarBrand carBrandB = model.carBrands.getCarBrand('B');
     if (carBrandB != null) {
       Car car1B = new Car(parking, carBrandB);
@@ -521,7 +521,7 @@ initCarsOfParking2OfIntermediateArea(Area area, Parking parking) {
       parking.cars.add(car1B);
       carBrandB.cars.add(car1B);
     }
-    
+
     CarBrand carBrandC = model.carBrands.getCarBrand('C');
     if (carBrandC != null) {
       Car car1C = new Car(parking, carBrandC);
@@ -531,7 +531,7 @@ initCarsOfParking2OfIntermediateArea(Area area, Parking parking) {
       parking.cars.add(car1C);
       carBrandC.cars.add(car1C);
     }
-    
+
     CarBrand carBrandO = model.carBrands.getCarBrand('O');
     if (carBrandO != null) {
       Car car1O = new Car(parking, carBrandO);
@@ -541,7 +541,7 @@ initCarsOfParking2OfIntermediateArea(Area area, Parking parking) {
       parking.cars.add(car1O);
       carBrandO.cars.add(car1O);
     }
-    
+
     CarBrand carBrandP = model.carBrands.getCarBrand('P');
     if (carBrandP != null) {
       Car car1P = new Car(parking, carBrandP);
@@ -551,7 +551,7 @@ initCarsOfParking2OfIntermediateArea(Area area, Parking parking) {
       parking.cars.add(car1P);
       carBrandP.cars.add(car1P);
     }
-    
+
     CarBrand carBrandQ = model.carBrands.getCarBrand('Q');
     if (carBrandQ != null) {
       Car car1Q = new Car(parking, carBrandQ);
@@ -561,7 +561,7 @@ initCarsOfParking2OfIntermediateArea(Area area, Parking parking) {
       parking.cars.add(car1Q);
       carBrandQ.cars.add(car1Q);
     }
-    
+
     CarBrand carBrandR = model.carBrands.getCarBrand('R');
     if (carBrandR != null) {
       Car car1R = new Car(parking, carBrandR);
@@ -571,7 +571,7 @@ initCarsOfParking2OfIntermediateArea(Area area, Parking parking) {
       parking.cars.add(car1R);
       carBrandR.cars.add(car1R);
     }
-    
+
     CarBrand carBrandX = model.carBrands.getCarBrand('X');
     if (carBrandX != null) {
       Car car1X = new Car(parking, carBrandX);
@@ -581,7 +581,7 @@ initCarsOfParking2OfIntermediateArea(Area area, Parking parking) {
       parking.cars.add(car1X);
       carBrandX.cars.add(car1X);
     }
-    
+
     for (Car car in parking.cars) {
       car.currentRow = car.startRow;
       car.currentColumn = car.startColumn;

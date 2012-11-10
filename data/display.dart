@@ -50,7 +50,7 @@ printParkingCar(CarParkingModel carParkingModel) {
   }
 }
 
-printModel(CarParkingModel carParkingModel) {  
+printModel(CarParkingModel carParkingModel) {
   printAreaParkingCar(carParkingModel);
   printCarBrandCar(carParkingModel);
   printParkingCar(carParkingModel);
