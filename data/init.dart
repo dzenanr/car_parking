@@ -1,3 +1,5 @@
+part of car_parking;
+
 CarParkingModel model;
 
 init(CarParkingModel carParkingModel) {

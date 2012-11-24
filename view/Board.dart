@@ -1,3 +1,5 @@
+part of car_parking;
+
 class Board {
 
   // The board is redrawn every INTERVAL ms.
@@ -42,7 +44,7 @@ class Board {
     // Canvas event.
     document.query('#canvas').on.mouseDown.add(onMouseDown);
     // Redraw every INTERVAL ms.
-    document.window.setInterval(redraw, INTERVAL);
+    new Timer.repeating(INTERVAL, (t) => redraw());
   }
 
   void set currentArea(Area area) {

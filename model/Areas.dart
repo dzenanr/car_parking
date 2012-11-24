@@ -1,3 +1,5 @@
+part of car_parking;
+
 class Areas extends Concepts {
 
   Area getArea(String code) {

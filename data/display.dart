@@ -1,4 +1,4 @@
-
+part of car_parking;
 
 printAreaParkingCar(CarParkingModel carParkingModel) {
   print('-----------------------');

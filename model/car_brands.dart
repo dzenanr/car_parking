@@ -1,3 +1,5 @@
+part of car_parking;
+
 class CarBrands extends Concepts {
 
   CarBrand getCarBrand(String code) {

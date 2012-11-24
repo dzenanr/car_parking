@@ -1,3 +1,5 @@
+part of car_parking;
+
 class ActionPanel {
 
   final Board board;

@@ -1,3 +1,5 @@
+part of car_parking;
+
 class MenuBar {
 
   final Board board;
