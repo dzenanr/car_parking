@@ -11,9 +11,7 @@ class Concepts {
   void add(Concept concept) {
     list.add(concept);
   }
-
-  Iterator<Concept> iterator() {
-    return list.iterator();
-  }
+  
+  Iterator<Concept> get iterator => list.iterator;
 
 }

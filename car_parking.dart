@@ -1,7 +1,7 @@
 library car_parking;
 
 import 'dart:html';
-import 'dart:isolate';
+import 'dart:async';
 
 part 'meta/oid.dart';
 part 'meta/concept.dart';
