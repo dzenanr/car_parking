@@ -19,17 +19,17 @@ class MenuBar {
     parking1Button = document.query('#parking1');
     parking2Button = document.query('#parking2');
 
-    beginnerAreaButton.on.click.add((MouseEvent e) {
+    beginnerAreaButton.onClick.listen((MouseEvent e) {
       board.currentArea = board.carParkingModel.areas.getArea('beginner');
     });
-    intermediateAreaButton.on.click.add((MouseEvent e) {
+    intermediateAreaButton.onClick.listen((MouseEvent e) {
       board.currentArea = board.carParkingModel.areas.getArea('intermediate');
     });
 
-    parking1Button.on.click.add((MouseEvent e) {
+    parking1Button.onClick.listen((MouseEvent e) {
       board.currentParking = board.currentArea.parkings.getParkingWithinArea(1);
     });
-    parking2Button.on.click.add((MouseEvent e) {
+    parking2Button.onClick.listen((MouseEvent e) {
       board.currentParking = board.currentArea.parkings.getParkingWithinArea(2);
     });
   }

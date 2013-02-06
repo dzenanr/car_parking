@@ -11,7 +11,7 @@ class ActionPanel {
 
   ActionPanel(this.board) {
     restartButton = document.query('#restart');
-    restartButton.on.click.add((MouseEvent e) {
+    restartButton.onClick.listen((MouseEvent e) {
       board.restart();
     });
 
