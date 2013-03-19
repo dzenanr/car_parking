@@ -44,7 +44,7 @@ class Board {
     // Canvas event.
     document.query('#canvas').onMouseDown.listen(onMouseDown);
     // Redraw every INTERVAL ms.
-    new Timer.repeating(const Duration(milliseconds: INTERVAL), (t) => redraw());
+    new Timer.periodic(const Duration(milliseconds: INTERVAL), (t) => redraw());
   }
 
   void set currentArea(Area area) {
@@ -147,8 +147,8 @@ class Board {
   }
 
   void onMouseDown(MouseEvent e) {
-    int row = e.offsetY ~/ cellHeight;
-    int column = e.offsetX ~/ cellWidth;
+    int row = e.offset.y ~/ cellHeight;
+    int column = e.offset.x ~/ cellWidth;
     Car car = getCarInCell(row, column);
     if (car != null) {
       currentParking.cars.deselect();
