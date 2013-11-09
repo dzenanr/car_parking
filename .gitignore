@@ -1,4 +1,4 @@
-.children
+.DS_Store
 packages
 *.js
 *.js.deps

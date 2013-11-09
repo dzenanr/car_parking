@@ -10,13 +10,13 @@ class ActionPanel {
   LabelElement parkingLabel;
 
   ActionPanel(this.board) {
-    restartButton = document.query('#restart');
+    restartButton = document.querySelector('#restart');
     restartButton.onClick.listen((MouseEvent e) {
       board.restart();
     });
 
-    areaLabel = document.query('#area');
-    parkingLabel = document.query('#parking');
+    areaLabel = document.querySelector('#area');
+    parkingLabel = document.querySelector('#parking');
   }
 
   void displayCurrentArea() {

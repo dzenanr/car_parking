@@ -42,7 +42,7 @@ class Board {
     currentParking = currentArea.parkings.getParkingWithinArea(1);
 
     // Canvas event.
-    document.query('#canvas').onMouseDown.listen(onMouseDown);
+    document.querySelector('#canvas').onMouseDown.listen(onMouseDown);
     // Redraw every INTERVAL ms.
     new Timer.periodic(const Duration(milliseconds: INTERVAL), (t) => redraw());
   }

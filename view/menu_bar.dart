@@ -13,11 +13,11 @@ class MenuBar {
   ButtonElement parking2Button;
 
   MenuBar(this.board) {
-    beginnerAreaButton = document.query('#beginner');
-    intermediateAreaButton = document.query('#intermediate');
+    beginnerAreaButton = document.querySelector('#beginner');
+    intermediateAreaButton = document.querySelector('#intermediate');
 
-    parking1Button = document.query('#parking1');
-    parking2Button = document.query('#parking2');
+    parking1Button = document.querySelector('#parking1');
+    parking2Button = document.querySelector('#parking2');
 
     beginnerAreaButton.onClick.listen((MouseEvent e) {
       board.currentArea = board.carParkingModel.areas.getArea('beginner');

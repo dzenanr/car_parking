@@ -28,7 +28,7 @@ void main() {
   // printModel(carParkingModel);
 
   // Get a reference to the canvas.
-  CanvasElement canvas = document.query('#canvas');
+  CanvasElement canvas = document.querySelector('#canvas');
   Board board = new Board(canvas, carParkingModel);
 }
 
