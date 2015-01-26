@@ -1,7 +1,7 @@
 name: car_parking
 author: Dzenan Ridjanovic <dzenanr@gmail.com>
 homepage: http://ondart.me/
-version: 0.0.9
+version: 0.1.0
 description: >
   A game in Dart with a model based on the Rush Hour game.
 dependencies:

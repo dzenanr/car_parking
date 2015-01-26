@@ -1,4 +1,4 @@
-##Car Parking wout dartling
+##Car Parking (wout dartling)
 
 A game in Dart with a model based on the Rush Hour game.  
 The goal is to exit the red car from the parking, 
